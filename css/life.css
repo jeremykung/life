@@ -1,0 +1,255 @@
+body, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  color: #7a7a7a;
+  margin-bottom: .7em;
+  font-family: 'Nunito', 'Slabo 27px', sans-serif, serif;
+}
+
+li, a, a:hover, ul {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+}
+
+.menu-toggle {
+  font-size: 1.8em;
+  margin-top: 50%;
+  margin-right: 25%;
+}
+
+.nav2 {
+  display: none;
+}
+
+nav {
+  width: 30%;
+  height: 100vh;
+  float: left;
+  position: fixed;
+  text-align: right;
+  transition: 1s;
+  opacity: .5;
+  border-right: 1px solid #d3d3d3;
+}
+
+nav:hover {
+  -webkit-transform: translateX(25px);
+  transform: translateX(25px);
+  box-shadow: 12px 0px 25px #e7e7e7;
+  border-right: 1px solid white;
+  transition: 1s;
+  opacity: 1;
+}
+/*
+nav:hover ~ .body {
+  filter: blur(3px);
+}
+*/
+.menu {
+  margin-top: 3%;
+  margin-right: 25%;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.menu li {
+  transition: .5s;
+}
+/* Only target nav1 (desktop menu) for these effects
+Target nav2 if you want to add effects for mobile menu */
+.nav1 li:hover {
+  color: #3f8000;
+  transition: .5s;
+  transform: translateX(-3px);
+}
+
+.audio-controls {
+  margin-top: 20%;
+}
+
+.audio-controls button {
+  border: 1px solid #acacac;
+  background-color: white;
+  color: #72a83e;
+  padding: 0 10px 7px 10px;
+  margin: 1em 0;
+  opacity: .5;
+  transition: 1s;
+  border-radius: 25px;
+}
+
+.audio-controls button:hover {
+  opacity: 1;
+  transition: 1s;
+/*  background-color: #9ccd54;
+  border: 1px solid #9ccd54; */
+  border-radius: 0;
+}
+
+.audio-controls button img {
+  width: 7px;
+}
+
+.audio-controls p {
+  font-size: 1em;
+  margin: 0;
+  overflow: hidden;
+}
+
+.audio-controls p:hover {
+  font-weight: bold;
+}
+
+.artist-link {
+  max-height: 0;
+  opacity: 1;
+  transition: 2s;
+}
+
+.show-artist {
+  max-height: 3em;
+  margin-bottom: 1em;
+  opacity: 1;
+  transition: 2s;
+}
+
+.menu-footer {
+  margin-top: 1em;
+  margin-right: 25%;
+  font-size: .7em;
+  overflow: hidden;
+}
+
+#life-header {
+  margin: 7% 0;
+  height: 100vh;
+}
+
+#life-header img {
+  width: 70%;
+  height: auto;
+  margin: 2em;
+  padding-bottom: 2em;
+}
+
+#life-header h1, #life-header p {
+  color: inherit;
+}
+
+.body-content img {
+  width: 100%;
+}
+
+.body {
+  width: 70%;
+  float: right;
+  text-align: center;
+  padding: 0 3%;
+  transition: .5s;
+}
+/* This is the blur for body when mouse is hovering over menu */
+.body-blur {
+  filter: blur(5px);
+  transition: .5s;
+}
+
+.body-content {
+  width: 70%;
+  margin: 7% 0 16% 0;
+}
+
+.body-content a {
+  color: #5e8c24;
+}
+
+.body-content a:hover {
+  color: #7ea44e;
+}
+
+.life-post-foot {
+  font-size: .8em;
+  padding-top: 2em;
+  opacity: .5;
+  transition: .3s;
+}
+
+.life-post-foot:hover {
+  opacity: .7;
+  transition: .3s;
+}
+
+/* Media Query edits below. This is for responsive design */
+
+@media only screen and (max-width: 1280px) {
+
+  .body-content {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 777px) {
+
+  .nav1 {display: none;}
+  .nav2 {display: block;}
+
+  nav {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .audio-controls {
+    margin-top: 7%;
+  }
+
+  .body, .body-content {
+    width: 100%;
+  }
+
+  .menu {
+    margin:0;
+    max-height: 0;
+    transition: 1s;
+  }
+
+  .menu li {
+    margin: 2em 0;
+  }
+
+  .menu-footer {
+    margin:0;
+    max-height: 0;
+    transition: 1s;
+  }
+
+  #life-header {
+    margin: 12em 0;
+  }
+
+  .menu-toggle {
+    font-size: 1.2em;
+    margin: 1em 0;
+    cursor: pointer;
+  }
+
+  .show-menu {
+    margin: 2em 0 !important;
+    max-height: 25em !important;
+    transition: 1s;
+  }
+
+  nav:hover {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  .body-content {
+    margin: 7em 0;
+  }
+
+}
