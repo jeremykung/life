@@ -181,6 +181,14 @@ Target nav2 if you want to add effects for mobile menu */
   transition: .3s;
 }
 
+.body-writing .body-content {
+  font-family: Spectral, Serif;
+}
+
+.spacer {
+  height: 12vh;
+}
+
 /* Media Query edits below. This is for responsive design */
 
 @media only screen and (max-width: 1280px) {
