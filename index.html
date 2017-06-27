@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Life</title>
+  <title>Jeremy Kung</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nunito|Slabo+27px" rel="stylesheet">
@@ -34,16 +34,15 @@
     <div class="menu-toggle">Jeremy K</div>
     <div class="menu">
       <ul>
-        <a href="life.php"><li>Life</li></a>
-        <a href="portfolio.php"><li>Portfolio</li></a>
-        <a href="gallery.php"><li>Gallery</li></a>
-        <a href="bio.php"><li>Bio</li></a>
+        <a class="nav-music"><li>Music</li></a>
+        <a class="nav-photography"><li>Photography</li></a>
+        <a class="nav-writing"><li>Writing</li></a>
       </ul>
       <div class="audio-controls">
         <button class="music-btn, playmusic" onclick="playmusic()"><img src="images/music-play.png"></button>
         <button class="music-btn, pausemusic" onclick="pausemusic()"><img src="images/music-pause.png"></button>
         <div class="artist-link">
-          <p><a href="https://nymano.bandcamp.com/" target="_blank">nymano<br>doceur (ft. saib)</a></p>
+          <p><a href="https://nymano.bandcamp.com/" target="_blank">Clammbon<br>Nightcruising (Fishmans Cover)</a></p> <!-- Audio Tag -->
         </div>
       </div>
     </div>
@@ -56,10 +55,9 @@
     <div class="menu-toggle">Jeremy K</div>
     <div class="menu">
       <ul>
-        <a href="life.php"><li>Life</li></a>
-        <a href="portfolio.php"><li>Portfolio</li></a>
-        <a href="gallery.php"><li>Gallery</li></a>
-        <a href="bio.php"><li>Bio</li></a>
+        <a class="nav-music"><li>Music</li></a>
+        <a class="nav-photography"><li>Photography</li></a>
+        <a class="nav-writing"><li>Writing</li></a>
       </ul>
       <div class="audio-controls">
         <button class="music-btn, playmusic" onclick="playmusic()"><img src="images/music-play.png"></button>
@@ -106,11 +104,37 @@ FIXED! by creating 2 navs that display and hide depending on screen size
       $(".body").removeClass("body-blur");
     });
 */
+
+  /* Script for Show/Hide Body Elements */
+
+
+  $(document).ready(function(){
+    $(".body-photography, .body-writing, .body-music").hide();
+    $(".nav-music").click(function(){
+        $(".body-photography, .body-writing, .body-home").fadeOut(1200);
+        $(".body-music").delay(1200).fadeIn(2000);
+    });
+    $(".nav-photography").click(function(){
+        $(".body-music, .body-writing, .body-home").fadeOut(1200);
+        $(".body-photography").delay(1200).fadeIn(2000);
+    });
+    $(".nav-writing").click(function(){
+        $(".body-music, .body-photography, .body-home").fadeOut(1200);
+        $(".body-writing").delay(1200).fadeIn(2000);
+    });
+    $(".menu-toggle").click(function(){
+        $(".body-music, .body-writing, .body-photography").fadeOut(1200);
+        $(".body-home").delay(1200).fadeIn(2000);
+    });
+});
+
   </script>
 
   <!-- Body -->
 
-  <div class="body">
+<div class="body">
+
+  <div class="body-home"> <!-- Life Home Content -->
 
     <div class="body-content" id="life-header">
       <img src="images/logo-graphic.png" alt="">
@@ -118,7 +142,7 @@ FIXED! by creating 2 navs that display and hide depending on screen size
       <p>This is where my inspiration lies<br>next to thoughts about my life.</p>
     </div>
 
-    <div class="body-content">
+    <!-- <div class="body-content">
       <img src="images/body bg.jpg">
       <p><br>Painting by <a href="http://www.pixiv.net/member.php?id=10746425">邦乔彦</a></p>
       <p class="life-post-foot">February 2017</p>
@@ -134,9 +158,40 @@ FIXED! by creating 2 navs that display and hide depending on screen size
       <h1>Nightingale</h1>
       <p>I woke up today to a speech by Earl Nightingale... a literary figure from a generation ago. His speech called 'The Strangest Secret' deterred me intially, as I dislike misleading sounding titles. However, the speech was beautifully spoken and very true to life. I do recommend giving it a listen.</p>
       <p class="life-post-foot">March 4 2017</p>
+    </div> -->
+
+  </div>
+
+  <div class="body-music"> <!-- Music -->
+
+    <div class="body-content">
+      <h1>Music</h1>
+      <p>Songs and all things musical</p>
     </div>
 
   </div>
+
+  <div class="body-photography"> <!-- Photography -->
+
+    <div class="body-content">
+      <h1>Photography</h1>
+      <p>There will be an image here</p>
+    </div>
+
+  </div>
+
+  <div class="body-writing"> <!-- Writing -->
+
+    <div class="body-content">
+      <h1>Writing</h1>
+      <p>poetry and written pieces here</p>
+    </div>
+
+  </div>
+
+</div>
+
+
 
   <!-- Body Blur -->
 
@@ -145,7 +200,7 @@ FIXED! by creating 2 navs that display and hide depending on screen size
   <!-- Music scripts, that activate on click in above Media Player Scripts -->
 
   <audio loop id="bgmusic">
-    <source src="audio/01 douceur (ft saib.).mp3" type="audio/mpeg">
+    <source src="audio/night.mp3" type="audio/mpeg"> <!-- Audio MP3 File -->
   Your browser does not support the audio element.
   </audio>
 
