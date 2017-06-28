@@ -185,6 +185,16 @@ Target nav2 if you want to add effects for mobile menu */
   font-family: Spectral, Serif;
 }
 
+.body-photography .body-content {
+  opacity: 0.25;
+  transition: 1s;
+  margin-top: 20%;
+}
+
+.body-photography .body-content:hover {
+  opacity: 1;
+}
+
 .spacer {
   height: 12vh;
 }
@@ -259,6 +269,10 @@ Target nav2 if you want to add effects for mobile menu */
 
   .body-content {
     margin: 7em 0;
+  }
+
+  .body-photography .body-content {
+    opacity: 1;
   }
 
 }
