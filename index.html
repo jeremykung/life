@@ -37,6 +37,7 @@
         <a class="nav-music"><li>Music</li></a>
         <a class="nav-photography"><li>Photography</li></a>
         <a class="nav-writing"><li>Writing</li></a>
+        <!-- <a class="nav-guestbook"><li>Guest Book</li></a> -->
       </ul>
       <div class="audio-controls">
         <button class="music-btn, playmusic" onclick="playmusic()"><img src="images/music-play.png"></button>
@@ -58,6 +59,7 @@
         <a class="nav-writing mobile-menu-toggle"><li>Writing</li></a>
         <a class="nav-photography mobile-menu-toggle"><li>Photography</li></a>
         <a class="nav-music mobile-menu-toggle"><li>Music</li></a>
+        <!-- <a class="nav-guestbook mobile-menu-toggle"><li>Guest Book</li></a> -->
       </ul>
       <div class="audio-controls">
         <button class="music-btn playmusic" onclick="playmusic()"><img src="images/music-play.png"></button>
@@ -105,24 +107,28 @@
   // Show/Hide Body Elements
 
 
-    $(".body-photography, .body-writing, .body-music").hide();
+    $(".body-photography, .body-writing, .body-music, .body-guestbook").hide(); // Initial Hiding of Menu Elements
+
     $(".nav-music").click(function(){
-        $(".body-photography, .body-writing, .body-home").fadeOut(1200);
+        $(".body-photography, .body-writing, .body-home, .body-guestbook").fadeOut(1200);
         $(".body-music").delay(1200).fadeIn(2000);
     });
     $(".nav-photography").click(function(){
-        $(".body-music, .body-writing, .body-home").fadeOut(1200);
+        $(".body-music, .body-writing, .body-home, body-guestbook").fadeOut(1200);
         $(".body-photography").delay(1200).fadeIn(2000);
     });
     $(".nav-writing").click(function(){
-        $(".body-music, .body-photography, .body-home").fadeOut(1200);
+        $(".body-music, .body-photography, .body-home, .body-guestbook").fadeOut(1200);
         $(".body-writing").delay(1200).fadeIn(2000);
     });
+    $(".nav-guestbook").click(function(){
+        $(".body-music, .body-writing, .body-photography, .body-home").fadeOut(1200);
+        $(".body-guestbook").delay(1200).fadeIn(2000);
+    });
     $(".menu-toggle").click(function(){
-        $(".body-music, .body-writing, .body-photography").fadeOut(1200);
+        $(".body-music, .body-writing, .body-photography, .body-guestbook").fadeOut(1200);
         $(".body-home").delay(1200).fadeIn(2000);
     });
-
 
   // Menu Toggle
     $(".menu-toggle").on("mousedown", function() {
@@ -148,25 +154,8 @@
       <img src="images/logo-graphic.png" alt="">
       <h1>Welcome</h1>
       <p>This is where my inspiration lies<br>next to thoughts about my life.</p>
+      <p>Some people call it a blog</p>
     </div>
-
-    <!-- <div class="body-content">
-      <img src="images/body bg.jpg">
-      <p><br>Painting by <a href="http://www.pixiv.net/member.php?id=10746425">邦乔彦</a></p>
-      <p class="life-post-foot">February 2017</p>
-    </div>
-
-    <div class="body-content">
-      <h1>Zoom R8</h1>
-      <p>Today I got a new toy... It's an 8 track portable recorder. I got it second hand and was a bit worried about it's condition, but after some tlc he got and bumping. Gonna have some fun with this little guy. I'll post some audio up here too when I record something nice.</p>
-      <p class="life-post-foot">February 11 2017</p>
-    </div>
-
-    <div class="body-content">
-      <h1>Nightingale</h1>
-      <p>I woke up today to a speech by Earl Nightingale... a literary figure from a generation ago. His speech called 'The Strangest Secret' deterred me intially, as I dislike misleading sounding titles. However, the speech was beautifully spoken and very true to life. I do recommend giving it a listen.</p>
-      <p class="life-post-foot">March 4 2017</p>
-    </div> -->
 
   </div>
 
@@ -174,20 +163,20 @@
 
     <div class="body-content"><div class="spacer"></div>
       <img src="audio/covers/spacelion.jpg" alt=""><br>
-      <audio src="audio/spacelion.mp3" controls controlsList="nodownload"></audio>
+      <audio src="audio/spacelion.mp3" controls controlsList="nodownload" loop></audio>
       <p><br>Space Lion<br>by <a href="https://open.spotify.com/artist/0lbYsAt8JNKNjttbncKg8i">Yoko Kanno</a></p>
       <p class="life-post-foot">Perhaps one of the most moving peices of music ever written.</p>
     </div>
     <div class="body-content"><div class="spacer"></div>
       <img src="audio/covers/night.jpg" alt=""><br>
-      <audio src="audio/night.mp3" controls controlsList="nodownload"></audio>
+      <audio src="audio/night.mp3" controls controlsList="nodownload" loop></audio>
       <p><br>ナイトクルージング (フィッシュマンズ)<br>by <a href="http://www.clammbon.com/profile/">クラムボン</a></p>
       <p class="life-post-foot">Sometimes a failing relationship is inevitable.<br>
-      And there is no one to blame and no one at fault.</p>
+      And there is no one to blame and no one's at fault.</p>
     </div>
     <div class="body-content"><div class="spacer"></div>
       <img src="audio/covers/douceur.jpg" alt=""><br>
-      <audio src="audio/douceur.mp3" controls controlsList="nodownload"></audio>
+      <audio src="audio/douceur.mp3" controls controlsList="nodownload" loop></audio>
       <p><br>douceur (ft saib.)<br>by <a href="https://nymano.bandcamp.com/album/short-stories">nymano</a></p>
       <p class="life-post-foot">Late nights and mellow vibes... They go together quite well no?</p>
     </div>
@@ -236,10 +225,6 @@
   <div class="body-writing"> <!-- Writing -->
 
     <div class="spacer"></div>
-    <!-- <div class="body-content">
-      <h1>Writing</h1>
-      <p>Poetry and other written pieces</p>
-    </div> -->
     <div class="body-content">
       <p>a small breath of cool air<br>
       slips through the open window,<br>
@@ -352,6 +337,16 @@
       The way I realized the colours of my own<br>
       as the wind carried me away</p>
       <p class="life-post-foot">2012</p>
+    </div>
+
+  </div> <!-- Writing End -->
+
+  <div class="body-guestbook">
+
+    <div class="body-content">
+      <h1>Guest Book</h1>
+      <p>Thank you very much for passing by</p>
+      <p>A guest book is coming soon</p>
     </div>
 
   </div>
