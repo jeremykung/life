@@ -55,13 +55,13 @@
     <div class="menu-toggle">Jeremy K</div>
     <div class="menu">
       <ul>
-        <a class="nav-writing"><li>Writing</li></a>
-        <a class="nav-photography"><li>Photography</li></a>
-        <a class="nav-music"><li>Music</li></a>
+        <a class="nav-writing mobile-menu-toggle"><li>Writing</li></a>
+        <a class="nav-photography mobile-menu-toggle"><li>Photography</li></a>
+        <a class="nav-music mobile-menu-toggle"><li>Music</li></a>
       </ul>
       <div class="audio-controls">
-        <button class="music-btn, playmusic" onclick="playmusic()"><img src="images/music-play.png"></button>
-        <button class="music-btn, pausemusic" onclick="pausemusic()"><img src="images/music-pause.png"></button>
+        <button class="music-btn playmusic" onclick="playmusic()"><img src="images/music-play.png"></button>
+        <button class="music-btn pausemusic" onclick="pausemusic()"><img src="images/music-pause.png"></button>
         <div class="artist-link">
           <p><a href="https://nymano.bandcamp.com/" target="_blank">nymano<br>doceur (ft. saib)</a></p>
         </div>
@@ -73,13 +73,11 @@
   </nav>
 
 
-  <!-- Media Player Script -->
-
   <script>
-    $(".menu-toggle").on("mousedown", function() {
-        $(".menu").toggleClass("show-menu");
-        $(".menu-footer").toggleClass("show-menu");
-    });
+
+  $(document).ready(function(){
+
+  // Media Player Script
     $(".playmusic").click(function() {
         $(".artist-link").addClass("show-artist");
     });
@@ -88,14 +86,13 @@
     });
 
 
-/* Hover Blur that breaks when in mobile mode... flicker issue and can't click
-FIXED! by creating 2 navs that display and hide depending on screen size
+  // Hover Blur that breaks when in mobile mode... flicker issue and can't click.. FIXED! by creating 2 navs that display and hide depending on screen size
+    $(".nav1").hover(function() {
+        $(".body").addClass("body-blur");
+      }, function() {
+        $(".body").removeClass("body-blur");
+      });
 
-*/    $(".nav1").hover(function() {
-      $(".body").addClass("body-blur");
-    }, function() {
-      $(".body").removeClass("body-blur");
-    });
 /* Below is an alternative function for hover blur effect
     $(".nav1").mouseenter(function() {
       $(".body").addClass("body-blur");
@@ -105,10 +102,9 @@ FIXED! by creating 2 navs that display and hide depending on screen size
     });
 */
 
-  /* Script for Show/Hide Body Elements */
+  // Show/Hide Body Elements
 
 
-  $(document).ready(function(){
     $(".body-photography, .body-writing, .body-music").hide();
     $(".nav-music").click(function(){
         $(".body-photography, .body-writing, .body-home").fadeOut(1200);
@@ -126,7 +122,19 @@ FIXED! by creating 2 navs that display and hide depending on screen size
         $(".body-music, .body-writing, .body-photography").fadeOut(1200);
         $(".body-home").delay(1200).fadeIn(2000);
     });
-});
+
+
+  // Menu Toggle
+    $(".menu-toggle").on("mousedown", function() {
+        $(".menu").toggleClass("show-menu");
+        $(".menu-footer").toggleClass("show-menu");
+    });
+    $(".mobile-menu-toggle").on("mousedown", function() {
+        $(".menu").toggleClass("show-menu");
+        $(".menu-footer").toggleClass("show-menu");
+    });
+
+    });
 
   </script>
 
