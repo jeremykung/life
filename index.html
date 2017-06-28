@@ -37,7 +37,7 @@
         <a class="nav-music"><li>Music</li></a>
         <a class="nav-photography"><li>Photography</li></a>
         <a class="nav-writing"><li>Writing</li></a>
-        <!-- <a class="nav-guestbook"><li>Guest Book</li></a> -->
+        <!-- <a class="nav-guestbook"><li>Guestbook</li></a> -->
       </ul>
       <div class="audio-controls">
         <button class="music-btn, playmusic" onclick="playmusic()"><img src="images/music-play.png"></button>
@@ -59,7 +59,7 @@
         <a class="nav-writing mobile-menu-toggle"><li>Writing</li></a>
         <a class="nav-photography mobile-menu-toggle"><li>Photography</li></a>
         <a class="nav-music mobile-menu-toggle"><li>Music</li></a>
-        <!-- <a class="nav-guestbook mobile-menu-toggle"><li>Guest Book</li></a> -->
+        <!-- <a class="nav-guestbook mobile-menu-toggle"><li>Guestbook</li></a> -->
       </ul>
       <div class="audio-controls">
         <button class="music-btn playmusic" onclick="playmusic()"><img src="images/music-play.png"></button>
@@ -339,14 +339,24 @@
       <p class="life-post-foot">2012</p>
     </div>
 
-  </div> <!-- Writing End -->
+  </div>
 
-  <div class="body-guestbook">
+  <div class="body-guestbook"> <!-- Guestbook -->
 
     <div class="body-content">
       <h1>Guest Book</h1>
-      <p>Thank you very much for passing by</p>
+      <p>Thank you for passing by</p>
       <p>A guest book is coming soon</p>
+    </div>
+    <div class="body-content">
+      <form action="mailto:jeremykung@gmail.com" method="post" enctype="text/plain">
+      Name:<br>
+      <input type="text" name="name"><br>
+      Optional Message:<br>
+      <input type="text" name="comment" size="50"><br><br>
+      <input type="submit" value="Send">
+      <input type="reset" value="Reset">
+      </form>
     </div>
 
   </div>
