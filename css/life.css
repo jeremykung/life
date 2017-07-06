@@ -203,6 +203,43 @@ Target nav2 if you want to add effects for mobile menu */
   height: 12vh;
 }
 
+/* Guestbook Form */
+
+.gb-form {
+  margin-top: 10%;
+  /*border: 1px solid grey;*/
+}
+
+.gb-form input, .gb-form textarea, .gb-form label, .gb-form select {
+  width: 70%;
+  margin-bottom: 2em;
+  padding: .5em;
+  border: 1px solid #dedede;
+}
+
+.gb-message {
+  height: 100px;
+}
+
+.gb-send {
+  border-radius: 5px;
+  color: #57a7a6;
+  background-color: #b7eeed;
+  border: none;
+  transition: .5s;
+}
+
+.gb-send:hover {
+  color: #b7eeed;
+  background-color: #57a7a6;
+}
+
+::-webkit-input-placeholder  { /* WebKit, Blink, Edge */
+  opacity: 0.5;
+} ::-moz-placeholder {
+  opacity: 0.5;
+}
+
 /* Media Query edits below. This is for responsive design */
 
 @media only screen and (max-width: 1280px) {
