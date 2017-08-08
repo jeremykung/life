@@ -67,6 +67,11 @@ Target nav2 if you want to add effects for mobile menu */
   transform: translateX(-3px);
 }
 
+.nav1 .menu li {
+  margin-top: 3px;
+  color: #a2a2a2;
+}
+
 .audio-controls {
   margin-top: 50%;
 }
