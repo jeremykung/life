@@ -42,15 +42,15 @@
     <div class="menu">
       <ul>
         <a class="nav-music"><li>Music</li></a>
-        <a class="nav-photography"><li>Photography</li></a>
         <a class="nav-writing"><li>Writing</li></a>
+        <a class="nav-photography"><li>Photography</li></a>
         <a class="nav-guestbook"><li>Guestbook</li></a>
       </ul>
       <div class="audio-controls">
         <button class="music-btn, playmusic" onclick="playmusic()"><img src="images/music-play.png"></button>
         <button class="music-btn, pausemusic" onclick="pausemusic()"><img src="images/music-pause.png"></button>
         <div class="artist-link">
-          <p><a href="http://www.clammbon.com/profile/" target="_blank">Clammbon<br>Nightcruising (Fishmans Cover)</a></p> <!-- Audio Tag -->
+          <p><a href="http://fabiocaramuru.com.br/" target="_blank">Fábio Caramuru<br>Cigarra</a></p> <!-- Audio Tag -->
         </div>
       </div>
     </div>
@@ -64,7 +64,7 @@
     <div class="menu">
       <ul>
         <a class="nav-writing mobile-menu-toggle"><li>Writing</li></a>
-        <a class="nav-photography mobile-menu-toggle"><li>Photography</li></a>
+        <a class="nav-photography mobile-menu-toggle"><li>Photos</li></a>
         <a class="nav-music mobile-menu-toggle"><li>Music</li></a>
         <a class="nav-guestbook mobile-menu-toggle"><li>Guestbook</li></a>
       </ul>
@@ -72,7 +72,7 @@
         <button class="music-btn playmusic" onclick="playmusic()"><img src="images/music-play.png"></button>
         <button class="music-btn pausemusic" onclick="pausemusic()"><img src="images/music-pause.png"></button>
         <div class="artist-link">
-          <p><a href="http://www.clammbon.com/profile/" target="_blank">Clammbon<br>Nightcruising (Fishmans Cover)</a></p>
+          <p><a href="http://fabiocaramuru.com.br/" target="_blank">Fábio Caramuru<br>Cigarra</a></p>
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@
   <!-- Nav Media Player -->
 
   <audio loop id="bgmusic">
-    <source src="audio/night.mp3" type="audio/mpeg"> <!-- Audio MP3 File -->
+    <source src="audio/cigarra.mp3" type="audio/mpeg"> <!-- Audio MP3 File -->
   Your browser does not support the audio element.
   </audio>
 
@@ -97,13 +97,19 @@
     <div class="body-content" id="life-header">
       <img src="images/logo-graphic.png" alt="">
       <h1>Welcome</h1>
-      <p>a journal of inspiration<br>and thoughts about my life</p>
+      <p>this is a journal of passing thoughts<br>and inspirations within my life</p>
     </div>
 
   </div>
 
   <div class="body-music"> <!-- Music -->
 
+    <div class="body-content"><div class="spacer"></div>
+      <img src="audio/covers/cigarra.jpg" alt=""><br>
+      <audio src="audio/cigarra.mp3" controls controlsList="nodownload" loop></audio>
+      <p><br>Cigarra<br>by <a href="http://fabiocaramuru.com.br/">Fábio Caramuru</a></p>
+      <p class="life-post-foot">moments outdoors, with you.</p>
+    </div>
     <div class="body-content"><div class="spacer"></div>
       <img src="audio/covers/spacelion.jpg" alt=""><br>
       <audio src="audio/spacelion.mp3" controls controlsList="nodownload" loop></audio>
@@ -121,7 +127,7 @@
       <img src="audio/covers/douceur.jpg" alt=""><br>
       <audio src="audio/douceur.mp3" controls controlsList="nodownload" loop></audio>
       <p><br>douceur (ft saib.)<br>by <a href="https://nymano.bandcamp.com/album/short-stories">nymano</a></p>
-      <p class="life-post-foot">Late nights and mellow vibes... They go together quite well no?</p>
+      <p class="life-post-foot">an introduction</p>
     </div>
 
   </div>
@@ -129,38 +135,44 @@
   <div class="body-photography"> <!-- Photography -->
 
     <div class="body-content">
+      <img src="images/photography/smaller falls break 2.jpg">
+      <p class="photo-caption">life's surprises</p>
+      <p class="life-post-foot">Photographed in <a href="https://www.google.ca/maps/place/Pinecone+Burke+Provincial+Park/">Woodland Walk Trail</a></p>
+      <!-- <p class="life-post-foot">2017</p> -->
+    </div>
+    <div class="body-content">
       <img src="images/photography/sometimes jazz is where you'll find me.jpg">
-      <p><br>Taken in <a href="https://www.google.ca/maps/place/Tokyo,+Japan/">サムタイム吉祥寺</a></p>
-      <p>Sometimes jazz is where you'll find me.</p>
-      <p class="life-post-foot">2016</p>
+      <p class="photo-caption">sometimes jazz is all I need to go on</p>
+      <p class="life-post-foot">Photographed in <a href="https://www.google.ca/maps/place/Tokyo,+Japan/">サムタイム吉祥寺</a></p>
+      <!-- <p class="life-post-foot">2016</p> -->
     </div>
     <div class="body-content">
       <img src="images/photography/Meiji Jingu Architecture.jpg">
-      <p><br>Taken in <a href="https://www.google.ca/maps/place/Tokyo,+Japan/">明治神宮</a></p>
-      <p>A forest walk, where the structure seemed to emerge from the trees.<br>
-      I remember how time seemed to relax as I stood there.</p>
-      <p class="life-post-foot">2016</p>
+      <p class="photo-caption">upon passing</p>
+      <p class="life-post-foot">Photographed in <a href="https://www.google.ca/maps/place/Tokyo,+Japan/">明治神宮</a></p>
+      <!-- <p class="life-post-foot">2016</p> -->
     </div>
     <div class="body-content">
       <img src="images/photography/Sulagsan Hike.jpg">
-      <p><br>Taken in <a href="https://www.google.ca/maps/place/Seoul,+South+Korea/">수락산</a></p>
-      <p>There's something about hiking alone.<br>
-      The ordinary seems spectacular again.</p>
-      <p class="life-post-foot">2016</p>
+      <!-- <p class="photo-caption">we may be alike</p> -->
+      <p class="life-post-foot">Photographed in <a href="https://www.google.ca/maps/place/Seoul,+South+Korea/">수락산</a></p>
+      <!-- <p>There's something about hiking alone.<br>
+      The ordinary seems spectacular again.</p> -->
+      <!-- <p class="life-post-foot">2016</p> -->
     </div>
     <div class="body-content">
       <img src="images/photography/Wash.jpg">
-      <p><br>Taken in <a href="https://www.google.ca/maps/place/Busan,+South+Korea/">부산시</a></p>
-      <p>The entire evening sun set before I left this spot.<br>
-      I could have watched these waves for an eternity.</p>
-      <p class="life-post-foot">2016</p>
+      <p class="life-post-foot">Photographed in <a href="https://www.google.ca/maps/place/Busan,+South+Korea/">부산시</a></p>
+      <!-- <p>The entire evening sun set before I left this spot.<br>
+      I could have watched these waves for an eternity.</p> -->
+      <!-- <p class="life-post-foot">2016</p> -->
     </div>
     <div class="body-content">
       <img src="images/photography/Temple Near Home.jpg">
-      <p><br>Taken in <a href="https://www.google.ca/maps/place/Tainan,+Taiwan/">臺南市</a></p>
-      <p>This was the last place I rode my bike to before my farewell to the city.<br>
-      I can still hear the birds singing in the trees.</p>
-      <p class="life-post-foot">2015</p>
+      <p class="life-post-foot">Photographed in <a href="https://www.google.ca/maps/place/Tainan,+Taiwan/">臺南市</a></p>
+      <!-- <p>This was the last place I rode my bike to before my farewell to the city.<br>
+      I can still hear the birds singing in the trees.</p> -->
+      <!-- <p class="life-post-foot">2015</p> -->
     </div>
 
   </div>
@@ -172,15 +184,15 @@
       <p>a small breath of cool air<br>
       slips through the open window,<br>
       a momentary pleasure<br>
-      on a hot summer's night,<br>
-      you've disappeared from my life,<br>
+      on a hot summer's night<br><br>
+      you had disappeared from my life,<br>
       as easily as you had entered it</p>
       <p class="life-post-foot">2017</p>
     </div>
     <div class="spacer"></div>
     <div class="body-content">
       <p>and even those beautiful intimacies<br>
-      deep at the bottom of your ocean<br>
+      held deep at the bottom of your ocean<br>
       will one day surface<br>
       washing ashore to join in a world of fragmented memories</p>
       <p class="life-post-foot">2017</p>
@@ -288,11 +300,11 @@
 
     <div class="body-content">
       <h1>Guestbook</h1>
-      <p>feel free to leave a message here</p>
+      <p>some wash ashore<br>and some are swallowed in the sea</p>
       <!-- Formspree Form -->
       <form class="gb-form" action="https://formspree.io/jeremykung@gmail.com" method="POST">
         <!-- <label>Guestbook</label><br> -->
-        <input class="gb-name" type="text" name="name" placeholder="name">
+        <!-- <input class="gb-name" type="text" name="name" placeholder="name"> -->
         <!-- <label>message</label><br> -->
         <textarea class="gb-message" name="message" rows="4" placeholder="message.."></textarea>
         <!-- <input class="gb-email" type="email" name="_replyto" placeholder="email"><br> -->
