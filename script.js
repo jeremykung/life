@@ -1,5 +1,7 @@
 // SCRIPTS
 
+$(document).ready(function(){
+
   // Music scripts, that activate on click in above Media Player Scripts
 
   var music = document.getElementById("bgmusic");
@@ -12,7 +14,7 @@
     music.pause();
   }
 
-  $(document).ready(function(){
+
 
   // Media Player Script
     $(".playmusic").click(function() {
@@ -75,5 +77,5 @@
         $(".menu-footer").toggleClass("show-menu");
     });
 
-
+// end for document ready
 });
