@@ -111,8 +111,9 @@ Target nav2 if you want to add effects for mobile menu */
 
 .artist-link {
   max-height: 0;
-  opacity: 1;
+  opacity: .7;
   transition: 2s;
+  font-size: .8em;
 }
 
 .show-artist {
